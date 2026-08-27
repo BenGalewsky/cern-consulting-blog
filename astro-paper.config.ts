@@ -3,13 +3,13 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://astro-paper.pages.dev/",
-    title: "AstroPaper",
-    description: "A minimal, responsive and SEO-friendly Astro blog theme.",
-    author: "Sat Naing",
-    profile: "https://satna.ing",
+    title: "CERN Consulting Blog",
+    description: "My time at CERN, consulting on the NextGen Trigger Project.",
+    author: "Ben Galewsky",
+    profile: undefined,
     ogImage: "default-og.jpg",
     lang: "en",
-    timezone: "Asia/Bangkok",
+    timezone: "America/Chicago",
     dir: "ltr",
   },
   posts: {
@@ -30,9 +30,8 @@ export default defineAstroPaperConfig({
   },
   socials: [
     { name: "github",   url: "https://github.com/satnaing/astro-paper" },
-    { name: "x",        url: "https://x.com/username" },
-    { name: "linkedin", url: "https://www.linkedin.com/in/username/" },
-    { name: "mail",     url: "mailto:yourmail@gmail.com" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/bengalewsky/" },
+    { name: "mail",     url: "mailto:bengal1@illinois.edu" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
