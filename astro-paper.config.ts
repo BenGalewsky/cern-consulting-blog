@@ -2,7 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://astro-paper.pages.dev/",
+    url: "https://bengalewsky.com/",
     title: "CERN Consulting Blog",
     description: "My time at CERN, consulting on the NextGen Trigger Project.",
     author: "Ben Galewsky",
@@ -24,12 +24,12 @@ export default defineAstroPaperConfig({
     showBackButton: true,
     editPost: {
       enabled: true,
-      url: "https://github.com/satnaing/astro-paper/edit/main/",
+      url: "https://github.com/BenGalewsky/cern-consulting-blog/edit/main/",
     },
     search: "pagefind",
   },
   socials: [
-    { name: "github",   url: "https://github.com/satnaing/astro-paper" },
+    { name: "github",   url: "https://github.com/BenGalewsky" },
     { name: "linkedin", url: "https://www.linkedin.com/in/bengalewsky/" },
     { name: "mail",     url: "mailto:bengal1@illinois.edu" },
   ],
