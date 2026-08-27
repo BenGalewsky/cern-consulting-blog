@@ -1,0 +1,103 @@
+---
+pubDatetime: 2026-08-13T15:22:00Z
+modDatetime: 2026-08-13T15:22:00Z
+title: What's it all about?
+slug: whats-it-all-about
+featured: true
+draft: false
+tags:
+  - background
+description: "What is CERN? What is the LHC? What is a trigger and why do we need a new one?"
+---
+import ResponsiveTable from '@/components/ResponsiveTable.astro';
+import lhcTrace from '../../assets/images/LHC_trace_0.png';
+import stdModel from '../../assets/images/STDM higgs and field D.png';
+import { Image } from 'astro:assets';
+
+This entry provides some background on the project I'm working on. It starts with an 
+overview of CERN and the Large Hadron Collider and then zooms in on the role of the 
+trigger in the detectors and what a NextGen trigger will look like.
+
+## What is CERN?
+The European Council for Nuclear Research (in French *Conseil Européen pour la Recherche Nucléaire*) is an inspring cross-border research institute dedicated to the peaceful application of foundational atomic research. It is located on the boarder of Switzerland and France near Geneva. 
+> Physicists and engineers at CERN use the world’s largest and most complex scientific instruments to study the basic constituents of matter – fundamental particles. Subatomic particles are made to collide together at close to the speed of light. The process gives us clues about how the particles interact, and provides insights into the fundamental laws of nature. We want to advance the boundaries of human knowledge by delving into the smallest building blocks of our universe.
+
+<figure>
+    <video controls 
+        poster="https://cds.cern.ch/images/OPEN-PHO-ACCEL-2013-052-1/file?size=large" 
+        src="https://videos.cern.ch/api/files/febc92f2-f771-4482-b308-58bdfd1debda/720p.mp4">
+    </video>
+    <figcaption class="text-left">
+    A short history of CERN (Video: CERN). <a href="https://videos.cern.ch/api/files/febc92f2-f771-4482-b308-58bdfd1debda/720p.mp4">Source: CERN (CDS)</a>
+  </figcaption>
+</figure>
+
+## What is the Standard Model?
+The [Standard Model](https://home.cern/science/physics/standard-model/) is an incredible achievement in physics. It is a theory that explains many of the basic building blocks of nature. Still it is incomplete. It can't explain gravity nor why there is more matter than antimatter in our universe. 
+
+<figure>
+    <Image src={stdModel} alt="The Standard Model" />
+    <figcaption class="text-center">
+      Image: Daniel Dominguez/CERN by <a href="https://cds.cern.ch/images/OPEN-PHO-CHART-2015-001-1">CERN</a>
+    </figcaption>
+</figure>
+
+High Energy Physics experimentalists use powerful instruments to understand this theory, to come up with precise measurements of the subatomic particles it describes and to explore new physics that the theory is unable to explain. And for all of this, we turn to...
+
+## What is the Large Hadron Collider?
+
+The Large Hadron Collider (LHC) is the world’s largest and most powerful particle accelerator. It consists of a 27-kilometre ring of superconducting magnets with a number of accelerating structures to boost the energy of the particles along the way. 
+
+Distributed around the ring are the four main experiment detectors, [ALICE](https://alice.cern/), [ATLAS](https://atlas.cern/Discover/Detector), [CMS](https://cms.cern/index.php/detector), [LHCb](https://lhcb-outreach.web.cern.ch/)
+
+<figure>
+    <Image src={lhcTrace} alt="Aerial view of the Geneva region with the position of the LHC" />
+    <figcaption class="text-center">
+      Photo by <a href="https://visit.cern/node/616/">CERN</a>
+    </figcaption>
+</figure>
+
+Some fun facts about the LHC from Riccardo Castellotti's [talk at Spark-AI Summit 2019](https://www.slideshare.net/databricks/deep-learning-on-apache-spark-at-cerns-large-hadron-collider-with-intel-technologies) 
+
+- The LHC is the largest machine in the world: 27Km circumference
+- It is the fastest racetrack: Particles travel at 99.9999991% speed of light
+- Emptiest place in the solar system: Particles circulate in the highest vacuum 
+- Hottest spot in the galaxy: Lead ion collisions create temperatures 100,000x hotter than the core of the sun
+
+
+## What is a Trigger?
+At the LHC, protons collide at 40 million times per second (Mhz) inside the detector. This would result in 
+data collection around 100 terrabits per second. That's a lot of data! Claude suggested some relatable comparisons of what this would look like:
+
+### Streaming and video
+- A 4K Netflix stream uses about 25 Mb/s. At 100 Tb/s, you could stream 4 million 4K movies simultaneously.
+- You could download an entire 2-hour HD movie (~5 GB) in about 1/2500th of a second — over 2,000 full movies land every second.
+
+### Home internet comparison
+- A fast home broadband connection today might be 200-500 Mb/s. 100 Tb/s is like combining the bandwidth of roughly 200,000–500,000 average homes into one single pipe.
+
+### Knowledge and data
+- The entire text of English Wikipedia (compressed, ~20 GB) could be transmitted over 600 times every second.
+- The full text collection of the Library of Congress (estimated in the tens of terabytes) could move across in well under a second.
+
+As it turns out, most of these collisions don't result in any interesting new particles. "Triggering" is filtering these events to reduce data rates to manageble levels.
+
+## What is High Luminosity?
+The LHC is currently undergoing a major upgrade. In order to explore new physics processes we could
+either increase the energy per collision, or increase the number of collisions. Increasing the energy opens the opportunity to release new particles that are tightly bound and are not seen in the current LHC. However, it
+is not possible to increase the energy with the current collider and will be very expensive to achieve in a future machine. 
+
+Increasing the number of collisions per second will allow us to see rare events more frequently and will yield interesting new science as well. The current upgrade to the LHC will result in the _High Luminosity Large Hadron Collider_ and is expected to begin operations in 2030.
+
+A major challenge in detector design is dealing with multiple collisions that occur near simultaneously. This is called _pileup_. In the collider, protons circulate in bunches, and these bunches cross (potentially colliding) at fixed intervals. Not every crossing produces a collision, but when one does happen, it's rarely just one pair of protons — it's many, because each bunch contains billions of protons. This is called pile-up. Up til now, we would typically see 60 interactions in a crossing. With High Luminosity LHC this number is expected to rise to 200 interactions. 
+
+## The NextGen Trigger Project
+Ok, now you know enough for me to explain the project I will be working on! The Eric & Wendy Schmidt Fund 
+for Strategic Innovation granted money to CERN to fund research and development of better trigger
+technologies to meet the challenges of High Luminosity. I have no skills to offer the project in terms of the
+complicated statistics, algorithms, and hardware required for this upgrade. I _do_ know quite a bit
+about automating machine learning workflows and data pipelines to improve productivity and make the results reproducible. This is a practice known as [MLOps](https://ml-ops.org/content/motivation) (Machine Learning Operations). 
+
+I will be assisting the NextGen Trigger project develop these practices. It's particularly relevant since the detector 
+changes over time due to the effects of radiation. It will be important to update the trigger regularly as 
+new data is collected.
