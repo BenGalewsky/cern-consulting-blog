@@ -37,6 +37,13 @@ export default {
     copyright: "Copyright",
     allRightsReserved: "All rights reserved.",
   },
+  subscribe: {
+    heading: "Follow this blog",
+    description: "Get an email whenever I post something new.",
+    emailLabel: "Email address",
+    placeholder: "you@example.com",
+    button: "Subscribe",
+  },
   pages: {
     tagTitle: "Tag",
     tagDesc: "All the articles with the tag",

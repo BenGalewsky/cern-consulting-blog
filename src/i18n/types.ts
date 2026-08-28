@@ -35,6 +35,13 @@ export interface UIStrings {
     copyright: string;
     allRightsReserved: string;
   };
+  subscribe: {
+    heading: string;
+    description: string;
+    emailLabel: string;
+    placeholder: string;
+    button: string;
+  };
   pages: {
     tagTitle: string;
     tagDesc: string;

@@ -95,6 +95,15 @@ const rssHref = getRelativeLocaleUrl(
       )
     }
 
+    {
+      site.followItVerification && (
+        <meta
+          name="follow.it-verification-code"
+          content={site.followItVerification}
+        />
+      )
+    }
+
     <!--
       Inline FOUC-prevention script: sets data-theme on <html> before
       the browser paints. Runs synchronously, no defer/async.
