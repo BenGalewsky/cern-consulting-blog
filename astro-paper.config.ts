@@ -3,11 +3,11 @@ import { defineAstroPaperConfig } from "./src/types/config";
 export default defineAstroPaperConfig({
   site: {
     url: "https://bengalewsky.com/",
-    title: "CERN Consulting Blog",
+    title: "Ben at CERN",
     description: "My time at CERN, consulting on the NextGen Trigger Project.",
     author: "Ben Galewsky",
     profile: undefined,
-    ogImage: "default-og.jpg",
+    ogImage: "ben-og.jpg",
     lang: "en",
     timezone: "America/Chicago",
     dir: "ltr",
