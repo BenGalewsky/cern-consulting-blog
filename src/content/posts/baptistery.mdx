@@ -1,0 +1,79 @@
+---
+pubDatetime: 2026-09-26T15:22:00Z
+modDatetime: 2026-09-26T15:22:00Z
+title: The Font of LHC Protons
+slug: baptistery
+featured: true
+draft: false
+tags:
+  - cern
+  - LHC
+description: "Finding the source of the LHCs protons"
+---
+import ResponsiveTable from '@/components/ResponsiveTable.astro';
+import { Image } from 'astro:assets';
+
+import linac4 from '../../assets/images/linac4.jpg';
+import quadrupole from '../../assets/images/CClin4_01_18-635x432.jpg';
+import highenergy from '../../assets/images/CClin5_01_18-635x432.jpg';
+
+
+On Friday I attended a meeting over on the side of the site where the
+computing group have their offices. This was the weekly meeting of the administrators
+and users of an impressive compute cluster set up in support of the Next Gen Trigger 
+projects. 
+
+I managed to get access to the white [CERN Bikes](https://campus.web.cern.ch/campus-life/mobility/cern-bike-sharing/) that are available all over the site.
+I had to take a bike safety course with details on Swiss and French rules of the road
+and a run down of the most dangerous spots on the CERN site. It works just like a city
+bike share. There is an app, you find a white bike, scan the code and off you go. It
+really makes getting to the other buildings much faster.
+
+# LINAC4
+I like to think of CERN as a medieval town with curvy paths meandering through
+neighborhoods. Some of them are filled with artiasans, such as the shops for building 
+superconducting magenets. Restaurant 1 is the town square, the center of social life
+for the community, but dotted here and there are the cathedrals. The imposing structures
+that house parts of "the machine".
+
+I've walked past one such structure when I've been over at that side of the site; 
+[LINAC4](https://cerncourier.com/a/the-long-road-to-linac4/)
+<figure>
+    <Image src={linac4} alt="The LINAC4" width={600} />
+</figure>
+
+Today I decided to figure out what goes on there. LINAC4 takes in the hydrogen ion, H<sup>−</sup> (one proton and two electrons) and
+provides the initial acceleration to 160 million electron volts before stripping the 
+electrons off and passing the energetic protons into the next step in the injection
+chain, the 
+[Proton Synchrotron Booster](https://home.cern/science/accelerators/proton-synchrotron-booster/).
+
+Why hydrogen ions? It makes it easier to layer them with the protons already circulating
+in the Synchrotron Booster.
+
+How do you strip the electrons off to leave just the proton? Pass the beam through a 
+foil made of carbon just a fraction of a micron thick.
+
+The details of just this one part of the LHC serves to show the incredible complexity of 
+the machine and what an incredible achievement it is, quietly humming away along the 
+boarder of Geneva and France.
+
+Here are some photos from the CERN courier article showing the inner workings of this 
+one piece of the LHC.
+
+<figure>
+    <Image src={quadrupole} alt="The Linac4 radio frequency quadrupole" />
+    <figcaption class="text-center">
+        The Linac4 radio frequency quadrupole. <br /> Image credit: M&nbsp; Vretenar
+    </figcaption>
+</figure>
+<figure>
+    <Image src={highenergy} alt="The Linac4 radio frequency quadrupole" />
+    <figcaption class="text-center">
+        The Linac4 high-energy section. <br /> Image credit: M Brice / CERN.
+    </figcaption>
+</figure>
+
+Forgive me my cathederal analogies. I visited 
+the [archelogical site](https://www.cathedrale-geneve.ch/en/archaeological-site/) that sits 
+underneath St Pierre in old town yesterday and still trying to make sense of the layered history there.
